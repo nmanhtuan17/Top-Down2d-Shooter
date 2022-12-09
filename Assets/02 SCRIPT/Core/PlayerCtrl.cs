@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] float speed = 20f;
     [SerializeField] Rigidbody2D _rb;
     Vector2 movement;
     void Start()
@@ -23,7 +23,7 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void MOVING()
     {
-        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        _rb.velocity = movement * speed * Time.deltaTime;
+        
+        _rb.velocity = movement * speed * Time.fixedDeltaTime;
     }
 }
