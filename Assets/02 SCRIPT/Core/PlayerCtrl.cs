@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    [SerializeField] float speed = 20f;
-    [SerializeField] Rigidbody2D _rb;
-    Vector2 movement;
+    Rigidbody2D _rb;
+    public Vector2 currentMovement { get; set; }
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -23,7 +22,12 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void MOVING()
     {
+        Vector2 currentMovePosition = _rb.position + currentMovement * Time.fixedDeltaTime ;
+        _rb.MovePosition(currentMovePosition);
         
-        _rb.velocity = movement * speed * Time.fixedDeltaTime;
+    }
+    public void setMovement(Vector2 newPosition)
+    {
+        currentMovement = newPosition;
     }
 }
