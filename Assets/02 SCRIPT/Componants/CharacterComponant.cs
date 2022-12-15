@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CharacterComponant : MonoBehaviour
 {
-    //protected float horizontalInput;
-    //protected float verticalInput;
     protected Vector2 inputMovement;
     protected PlayerCtrl playerCtrl;
 
@@ -22,6 +20,7 @@ public class CharacterComponant : MonoBehaviour
    protected virtual void HandleAbility()
    {
         InternalInput();
+        HandleInput();
    }
 
     //get the necassary input to perform our actions
@@ -33,8 +32,6 @@ public class CharacterComponant : MonoBehaviour
     //get the main input to ctrl character
     protected virtual void InternalInput()
    {
-        //horizontalInput = Input.GetAxisRaw("Horizontal");
-        //verticalInput = Input.GetAxisRaw("Vertical");
         inputMovement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
    }
 }

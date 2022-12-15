@@ -22,9 +22,8 @@ public class PlayerCtrl : MonoBehaviour
     }
     public void MOVING()
     {
-        Vector2 currentMovePosition = _rb.position + currentMovement * Time.fixedDeltaTime ;
+        Vector2 currentMovePosition = _rb.position + currentMovement * Time.fixedDeltaTime;
         _rb.MovePosition(currentMovePosition);
-        
     }
     public void setMovement(Vector2 newPosition)
     {

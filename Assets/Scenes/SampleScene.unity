@@ -301,7 +301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd1d7167eb46774286e3192ff2c458c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 5
+  runSpeed: 10
+  dashSpeed: 30
+  dashTime: 0.1
+  resetSpeed: 5
 --- !u!1 &2076466119
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +317,7 @@ GameObject:
   - component: {fileID: 2076466120}
   - component: {fileID: 2076466121}
   - component: {fileID: 2076466122}
+  - component: {fileID: 2076466123}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Untagged
@@ -413,3 +418,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.51842403, y: 0.8571269}
   m_EdgeRadius: 0
+--- !u!95 &2076466123
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076466119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25bba4d8f0459f543833f7f66f3920c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
