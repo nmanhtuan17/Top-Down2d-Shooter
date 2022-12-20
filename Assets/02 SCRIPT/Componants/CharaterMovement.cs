@@ -6,9 +6,16 @@ public class CharaterMovement : CharacterComponant
 {
     [SerializeField] float speed = 5f;
     [SerializeField] float runSpeed = 10f;
-    public float dashSpeed = 15f;
-    public float dashTime, resetSpeed;
+    [SerializeField] float dashSpeed = 15f;
+    [SerializeField] float dashTime, resetSpeed;
 
+    public enum FlipMode
+    {
+        MovementFlip,
+        WeaponFlip
+    }
+
+    [SerializeField] FlipMode flipMode = FlipMode.MovementFlip;
     public float walkSpeed { get; set; }
     protected override void Start()
     {
@@ -60,15 +67,19 @@ public class CharaterMovement : CharacterComponant
     }
     void FlipCharacter()
     {
-        Vector2 tmp = transform.localScale;
-        if (inputMovement.x > 0)
+        if(flipMode == FlipMode.MovementFlip)
         {
-            tmp.x = 1;
+            Vector2 tmp = transform.localScale;
+            if (inputMovement.x > 0)
+            {
+                tmp.x = 1;
+            }
+            else if (inputMovement.x < 0)
+            {
+                tmp.x = -1;
+            }
+            transform.localScale = tmp;
         }
-        else if (inputMovement.x < 0)
-        {
-            tmp.x = -1;
-        }
-        transform.localScale = tmp;
     }
+       
 }
