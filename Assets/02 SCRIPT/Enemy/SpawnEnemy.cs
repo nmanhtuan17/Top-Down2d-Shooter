@@ -5,10 +5,12 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     float timeCountDown;
+    float waveNumber = 0;
     Vector2 border;
     [SerializeField] GameObject enemyPrefab;
     
     [SerializeField] List<Vector2> posSpawns = new List<Vector2>();
+
     Vector2 posSpawn;
     [SerializeField] Vector2 randomPos;
     void Start()
@@ -24,7 +26,7 @@ public class SpawnEnemy : MonoBehaviour
         if (timeCountDown <= 0)
         {
             Spawn();
-            timeCountDown = Random.Range(2f, 2.5f);
+            
         }
             
         
@@ -37,6 +39,8 @@ public class SpawnEnemy : MonoBehaviour
         posSpawns.Add(posSpawn);
 
         Instantiate(enemyPrefab, posSpawns[Random.Range(0, posSpawns.Count)], Quaternion.identity);
+
+
+        timeCountDown = Random.Range(2f, 2.5f);
     }
-    
 }
