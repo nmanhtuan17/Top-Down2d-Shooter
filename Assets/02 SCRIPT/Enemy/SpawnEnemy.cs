@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    float timeCountDown;
     Vector2 border;
-    [SerializeField] GameObject enemyPrefab;
-    
-    [SerializeField] List<Vector2> posSpawns = new List<Vector2>();
     Vector2 posSpawn;
-    [SerializeField] Vector2 randomPos;
+    float timeCountDown;
+
+    [SerializeField] float numOfEnemy;
+    [SerializeField] GameObject enemyPrefab;
     void Start()
     {
         border = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
@@ -24,7 +23,7 @@ public class SpawnEnemy : MonoBehaviour
         if (timeCountDown <= 0)
         {
             Spawn();
-            timeCountDown = Random.Range(2f, 2.5f);
+            
         }
             
         
@@ -32,11 +31,13 @@ public class SpawnEnemy : MonoBehaviour
 
     void Spawn()
     {
-        randomPos = new Vector2(Random.Range(0.1f, 0.5f), Random.Range(0.1f, 0.5f));
-        posSpawn = new Vector2 (Random.Range(-border.x, border.x), Random.Range(-border.y, border.y));
-        posSpawns.Add(posSpawn);
-
-        Instantiate(enemyPrefab, posSpawns[Random.Range(0, posSpawns.Count)], Quaternion.identity);
+        numOfEnemy = Random.Range(3f, 5f);
+        for(int i = 0; i < numOfEnemy; i++)
+        {
+            posSpawn = new Vector2(Random.Range(-border.x, border.x), Random.Range(-border.y, border.y));
+            Instantiate(enemyPrefab, posSpawn, Quaternion.identity);
+        }
+        
+        timeCountDown = Random.Range(3f, 4f);
     }
-    
 }

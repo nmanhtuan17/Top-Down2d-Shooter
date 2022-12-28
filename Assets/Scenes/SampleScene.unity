@@ -367,9 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397cc109129b1a846a4803ee92c5f61e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numOfEnemy: 3
   enemyPrefab: {fileID: 8100563614835862892, guid: c7a5c6c81534b7e488bf3bc847185d52, type: 3}
-  posSpawns: []
-  randomPos: {x: 0, y: 0}
 --- !u!4 &1563513875
 Transform:
   m_ObjectHideFlags: 0
