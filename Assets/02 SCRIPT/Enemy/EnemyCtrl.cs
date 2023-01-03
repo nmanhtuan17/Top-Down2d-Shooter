@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyCtrl : MonoBehaviour
 {
+
     public static EnemyCtrl instance;
     [SerializeField] GameObject Player;
     [SerializeField] public float speed = 2.5f;
