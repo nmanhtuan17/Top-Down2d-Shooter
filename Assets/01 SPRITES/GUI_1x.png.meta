@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 21d28466c6cc4834db7f9a3a78ecfef5
+guid: fea7bfade30630f4e98478d68135749e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI BARS_0
+      name: GUI_1x_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 7
-        width: 26
-        height: 2
+        x: 0
+        y: 12
+        width: 40
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94355892e2bb6184b9190408ee6b893f
-      internalID: 1933725850
+      spriteID: 1e016c6c62e62f2488596839bb7f8cda
+      internalID: 1086065824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI BARS_1
+      name: GUI_1x_1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 2
+        x: 0
+        y: 4
+        width: 16
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190c123c5c467d3459221a753c63f7f4
-      internalID: -1379484278
+      spriteID: 3d9e0d9651a4eb546adb54e7c61d3c21
+      internalID: -1701617920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_1x_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd25bbb556196f643ac2d062fcbed26b
+      internalID: -549255156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_1x_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0981f604dea915242a0bef5b01c0d878
+      internalID: 583044079
       vertices: []
       indices: 
       edges: []
@@ -156,8 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UI BARS_1: -1379484278
-      UI BARS_0: 1933725850
+      GUI_1x_2: -1266897705
+      GUI_1x_0: -1855455044
+      GUI_1x_1: -1701617920
+      GUI_1x_3: 353931689
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
