@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterAnimation : CharacterComponant
+public class Animation : CharacterComponant
 {
     public Animator anim;
     protected override void HandleAbility()

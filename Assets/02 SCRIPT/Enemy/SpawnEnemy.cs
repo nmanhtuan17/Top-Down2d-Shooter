@@ -6,7 +6,7 @@ public class SpawnEnemy : MonoBehaviour
 {
     Vector2 border;
     Vector2 posSpawn;
-    float timeCountDown;
+    float timeCountDown = 2f;
 
     [SerializeField] float numOfEnemy;
     [SerializeField] GameObject enemyPrefab;
@@ -23,21 +23,19 @@ public class SpawnEnemy : MonoBehaviour
         if (timeCountDown <= 0)
         {
             Spawn();
-            
         }
-            
+        //Spawn Enemy end
         
     }
 
     void Spawn()
     {
-        numOfEnemy = Random.Range(3f, 5f);
+        numOfEnemy = Mathf.Floor(Random.Range(3f, 5f));
         for(int i = 0; i < numOfEnemy; i++)
         {
             posSpawn = new Vector2(Random.Range(-border.x, border.x), Random.Range(-border.y, border.y));
             Instantiate(enemyPrefab, posSpawn, Quaternion.identity);
         }
-        
-        timeCountDown = Random.Range(3f, 4f);
+        timeCountDown = Random.Range(3f, 5f);
     }
 }
