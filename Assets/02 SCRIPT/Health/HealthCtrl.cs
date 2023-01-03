@@ -5,18 +5,17 @@ using UnityEngine;
 public class HealthCtrl : MonoBehaviour
 {
     public static HealthCtrl instance;
-    [Header("Health")]
-    [SerializeField] float initialHealth = 10f;
-    [SerializeField] float maxHealth = 10f;
 
-    [Header("Setting")]
-    [SerializeField] bool destroyObj;
 
-    [SerializeField] float curentHealth;
+    
+    public float curentHealth;
+    public float maxHealth = 10;
+
+    
     private void Awake()
     {
         instance = this;
-        curentHealth = initialHealth;
+        curentHealth = maxHealth;
     }
     private void Update()
     {
@@ -29,17 +28,8 @@ public class HealthCtrl : MonoBehaviour
         curentHealth -= damage;
         if(curentHealth <= 0)
         {
-            Die();
+            gameObject.SetActive(false);
+            Time.timeScale = 0;
         }
-    }
-
-    private void Die()
-    {
-        gameObject.SetActive(false);
-    }
-    
-    private void Revive()
-    {
-
     }
 }
