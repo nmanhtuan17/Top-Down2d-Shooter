@@ -23,7 +23,11 @@ public class UIManager : MonoBehaviour
         healthBar.value = Mathf.Lerp(healthBar.value,
             HealthCtrl.instance.curentHealth / HealthCtrl.instance.maxHealth, 10f * Time.deltaTime);
 
-        healthNum.text = HealthCtrl.instance.curentHealth.ToString() + 
+        if(HealthCtrl.instance.curentHealth >= 0)
+        {
+            healthNum.text = HealthCtrl.instance.curentHealth.ToString() +
                         "/" + HealthCtrl.instance.maxHealth.ToString();
+        }
+        
     }
 }

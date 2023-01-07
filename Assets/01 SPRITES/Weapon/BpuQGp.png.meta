@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c4174896ed0a58a43901940c98706464
+guid: 5cefd768a77d81749b8ae29d13135912
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
+      name: BpuQGp_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 64
-        width: 45
-        height: 64
+        x: 25
+        y: 190
+        width: 20
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55840e0c8a37df148a733c674e301fff
-      internalID: 1225935821
+      spriteID: 8a12d1b4e1e7d984db1bc4fbc10f09da
+      internalID: 308131931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_1
+      name: BpuQGp_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 64
-        width: 46
-        height: 63
+        x: 95
+        y: 185
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4de1d97c26f184f9ba4e6c4e9167d1
-      internalID: -1576777352
+      spriteID: a5a23b0884d4dd64c959098a79b6babc
+      internalID: 1766669473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_2
+      name: BpuQGp_2
       rect:
         serializedVersion: 2
-        x: 133
-        y: 65
-        width: 46
-        height: 60
+        x: 175
+        y: 185
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfd6d3e59f85fa24691e4cd1beb0ac3e
-      internalID: 1550646741
+      spriteID: b2e7fd71edd7e61429d5b81ae5506636
+      internalID: -2034283203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_3
+      name: BpuQGp_3
       rect:
         serializedVersion: 2
-        x: 197
-        y: 65
-        width: 46
-        height: 62
+        x: 255
+        y: 185
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25f445b6cc6362d4680d47c1782e91c5
-      internalID: -565193585
+      spriteID: f13d10d89df08b842ae861a03449ce55
+      internalID: -1200879069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_4
+      name: BpuQGp_4
       rect:
         serializedVersion: 2
-        x: 261
-        y: 64
-        width: 46
-        height: 63
+        x: 335
+        y: 185
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab8d442b70291c240ac7a052fa5910da
-      internalID: 1454671538
+      spriteID: 816d72b8968ea8f4d9d1a507efcfb0a6
+      internalID: -399293954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_5
+      name: BpuQGp_5
       rect:
         serializedVersion: 2
-        x: 325
-        y: 65
-        width: 46
-        height: 60
+        x: 25
+        y: 110
+        width: 20
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc412b84bdee4e84498e3b6d104fc00d
-      internalID: -833990009
+      spriteID: e1c6ee64e0431534c8b3ef042efb9033
+      internalID: -1180033546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_6
+      name: BpuQGp_6
       rect:
         serializedVersion: 2
-        x: 389
-        y: 64
-        width: 46
-        height: 63
+        x: 95
+        y: 105
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2080bc330ce260a4992dc5020ebd59db
-      internalID: 1744322415
+      spriteID: 7a9a2f6d36ddafb439f5e9e75386a893
+      internalID: 1630954650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_7
+      name: BpuQGp_7
       rect:
         serializedVersion: 2
-        x: 69
-        y: 0
-        width: 46
-        height: 63
+        x: 175
+        y: 105
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,20 +265,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 382fdcbbfc516dc47b940c61b322b1c5
-      internalID: -1241564984
+      spriteID: 1cc60987ba0a739419f0af57a44e6afd
+      internalID: 966604281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_8
+      name: BpuQGp_8
       rect:
         serializedVersion: 2
-        x: 133
-        y: 0
-        width: 46
-        height: 61
+        x: 255
+        y: 105
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e882201526b95c4f90b0f082c6529a1
-      internalID: -1071147487
+      spriteID: 9d8374549ee81774f94d32baeb01866a
+      internalID: -71844423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_9
+      name: BpuQGp_9
       rect:
         serializedVersion: 2
-        x: 197
-        y: 0
-        width: 46
-        height: 63
+        x: 335
+        y: 105
+        width: 40
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,20 +307,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b5424964ba5b5240a20c1742a61ba11
-      internalID: 1316520718
+      spriteID: 5872c171d77e69943a076402350a4ff8
+      internalID: -1388882384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_10
+      name: BpuQGp_10
       rect:
         serializedVersion: 2
-        x: 262
-        y: 0
-        width: 45
-        height: 64
+        x: 0
+        y: 25
+        width: 15
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,20 +328,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 472fa88ebed661d43b9b4f2713464a19
-      internalID: 1316216321
+      spriteID: 3b902832dffa9b440a024449fbba6c71
+      internalID: -1941723547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_11
+      name: BpuQGp_11
       rect:
         serializedVersion: 2
-        x: 6
-        y: 0
-        width: 45
-        height: 64
+        x: 80
+        y: 25
+        width: 15
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,8 +349,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53065843912fbc42ba7b5bbb8d197e9
-      internalID: 1586783800
+      spriteID: 132dada1876757c4f9d0b95626bb148d
+      internalID: 189156132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BpuQGp_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 15
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f6bc95be3706548a52f633019861cd
+      internalID: -1345986374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BpuQGp_15
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 25
+        width: 65
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d2e27dcf576244a922a32973cfe7c5
+      internalID: 779358967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BpuQGp_16
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 25
+        width: 65
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a689e34e992ab04a914111692d0efee
+      internalID: 1441357663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BpuQGp_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 15
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2444e2d8ccc35c42855610b48001d22
+      internalID: 823928420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BpuQGp_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 10
+        width: 25
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7787a6d1061d80946acc56141bf0a3c4
+      internalID: 618686212
       vertices: []
       indices: 
       edges: []
@@ -359,25 +464,34 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_11: 1586783800
-      Player_2: 1550646741
-      Player_4: 1454671538
-      Player_6: 1744322415
-      Player_1: -1576777352
-      Player_9: 1316520718
-      Player_0: 1225935821
-      Player_7: -1241564984
-      Player_3: -565193585
-      Player_8: -1071147487
-      Player_10: 1316216321
-      Player_5: -833990009
+      BpuQGp_4: -399293954
+      BpuQGp_16: 1441357663
+      BpuQGp_18: -1712701256
+      BpuQGp_9: -1388882384
+      BpuQGp_20: 101783681
+      BpuQGp_5: -1180033546
+      BpuQGp_19: 1677797934
+      BpuQGp_13: 823928420
+      BpuQGp_12: -1345986374
+      BpuQGp_0: 308131931
+      BpuQGp_14: 618686212
+      BpuQGp_7: 966604281
+      BpuQGp_11: 189156132
+      BpuQGp_3: -1200879069
+      BpuQGp_6: 1630954650
+      BpuQGp_8: -71844423
+      BpuQGp_15: 779358967
+      BpuQGp_10: -1941723547
+      BpuQGp_17: 283668620
+      BpuQGp_1: 1766669473
+      BpuQGp_2: -2034283203
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
