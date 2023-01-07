@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] Image healthBar;
-    
+    [SerializeField] Slider healthBar;
+    [SerializeField] TextMeshProUGUI healthNum;
     void Start()
     {
         
@@ -19,7 +20,10 @@ public class UIManager : MonoBehaviour
     }
     void UpdateHealth()
     {
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount,
+        healthBar.value = Mathf.Lerp(healthBar.value,
             HealthCtrl.instance.curentHealth / HealthCtrl.instance.maxHealth, 10f * Time.deltaTime);
+
+        healthNum.text = HealthCtrl.instance.curentHealth.ToString() + 
+                        "/" + HealthCtrl.instance.maxHealth.ToString();
     }
 }

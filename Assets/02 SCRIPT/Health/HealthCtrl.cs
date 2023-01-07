@@ -23,8 +23,6 @@ public class HealthCtrl : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if(curentHealth <= 0)
-            return;
         curentHealth -= damage;
         if(curentHealth <= 0)
         {

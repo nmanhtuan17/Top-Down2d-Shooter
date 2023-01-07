@@ -112,7 +112,7 @@ TextureImporter:
         width: 26
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,7 +133,7 @@ TextureImporter:
         width: 26
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,6 +141,27 @@ TextureImporter:
       bones: []
       spriteID: 190c123c5c467d3459221a753c63f7f4
       internalID: -1379484278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI BARS_2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 10
+        width: 28
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9645e6ab2daeec46b27631bb86c7b13
+      internalID: 1744762781
       vertices: []
       indices: 
       edges: []
@@ -158,6 +179,7 @@ TextureImporter:
     nameFileIdTable:
       UI BARS_1: -1379484278
       UI BARS_0: 1933725850
+      UI BARS_2: 1744762781
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
