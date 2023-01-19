@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8100563613520326485}
   - component: {fileID: 8100563613520326482}
   - component: {fileID: 8100563613520326483}
+  - component: {fileID: 6976415661997263911}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Enemy
@@ -122,6 +123,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.0034322143}
   serializedVersion: 2
   m_Radius: 0.2700402
+--- !u!114 &6976415661997263911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100563613520326481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a3dc57d92b8f4409c318b2013cd095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8100563614835862892
 GameObject:
   m_ObjectHideFlags: 0

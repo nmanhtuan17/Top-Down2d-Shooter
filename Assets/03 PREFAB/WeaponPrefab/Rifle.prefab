@@ -130,6 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643a8ffdfe17ad74ca4dfc8e4a9c2a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 483795689998356665, guid: 9ab725b10c19a4a4daec0ca8033272bc, type: 3}
+  timeBtwShoot: 0.5
+  FireForce: 40
+  firePos: {fileID: 5574661304597519640}
 --- !u!1 &7162591242534083399
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5574661304597519640}
   m_Layer: 0
-  m_Name: bulletPos
+  m_Name: FirePos
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -153,11 +157,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7162591242534083399}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.6108, y: 0.0409, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9222123637405655695}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}

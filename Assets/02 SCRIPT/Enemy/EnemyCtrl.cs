@@ -6,6 +6,8 @@ public class EnemyCtrl : MonoBehaviour
 {
     public static EnemyCtrl instance;
 
+    public float health = 3;
+
     [SerializeField] GameObject Player;
     [SerializeField] public float speed = 2.5f;
 
@@ -21,11 +23,16 @@ public class EnemyCtrl : MonoBehaviour
     void Update()
     {
         followPlayer();
+        EnemyDead();
     }
 
     void followPlayer()
     {
         transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
     }
-
+    public void EnemyDead()
+    {
+        if (health <= 0)
+            Destroy(gameObject);
+    }
 }

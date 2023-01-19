@@ -9,6 +9,9 @@ public class CharaterMovement : CharacterComponant
     [SerializeField] float dashSpeed = 15f;
     [SerializeField] float dashTime, resetSpeed;
 
+    public bool facingRight = false;
+    public bool facingLeft = false;
+
     public enum FlipMode
     {
         MovementFlip,
@@ -73,10 +76,12 @@ public class CharaterMovement : CharacterComponant
             if (inputMovement.x > 0)
             {
                 tmp.x = 1;
+                facingRight = true;
             }
             else if (inputMovement.x < 0)
             {
                 tmp.x = -1;
+                facingLeft = true;
             }
             transform.localScale = tmp;
         }
