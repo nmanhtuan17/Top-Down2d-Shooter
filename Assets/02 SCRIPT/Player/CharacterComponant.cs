@@ -6,10 +6,12 @@ public class CharacterComponant : MonoBehaviour
 {
     protected Vector2 inputMovement;
     protected PlayerCtrl playerCtrl;
+    protected WeaponCtrl weaponCtrl;
     
     protected virtual void Start()
     {
         playerCtrl = GetComponent<PlayerCtrl>();
+        weaponCtrl = FindObjectOfType<WeaponCtrl>();
     }
 
     protected virtual void Update()

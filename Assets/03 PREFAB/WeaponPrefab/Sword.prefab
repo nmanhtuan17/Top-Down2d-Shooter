@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5561288384812099477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34, y: 0.014, z: 0}
+  m_LocalPosition: {x: 1, y: 0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 34228528, guid: 89b2cf729f5b3d74bb21c5893ac95b4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5561288385449241523}
-  - component: {fileID: 5561288385449241524}
+  - component: {fileID: 745723026052881054}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5561288385449241524
+--- !u!114 &745723026052881054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,3 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643a8ffdfe17ad74ca4dfc8e4a9c2a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  timeBtwShoot: 0.5
+  FireForce: 40
+  firePos: {fileID: 0}
+  angle: 0

@@ -9,32 +9,21 @@ public class WeaponCtrl : MonoBehaviour
     [SerializeField] float FireForce = 40f;
     [SerializeField] Transform firePos;
 
-    CharaterMovement CharactorMovement;
-    [SerializeField] bool useRecoil = true;
-    [SerializeField] float RecoilForce = 5f;
+    public float angle;
     void Start()
     {
-        CharactorMovement = FindObjectOfType<CharaterMovement>();
+        
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
         }
-        RotateWeapon();
     }
-     void RotateWeapon()
-    {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float angle = Mathf.Atan2(mousePos.y - transform.position.y,
-            mousePos.x - transform.position.x) * Mathf.Rad2Deg;
-
-        // Rotate the weapon to the calculated angle
-        transform.rotation = Quaternion.Euler(0, 0, angle);
-    }
+     
     void Fire()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePos.position, firePos.rotation);

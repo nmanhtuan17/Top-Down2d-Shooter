@@ -35,4 +35,11 @@ public class EnemyCtrl : MonoBehaviour
         if (health <= 0)
             Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D otherCol)
+    {
+        if (otherCol.tag == "Bullet")
+        {
+            health--;
+        }
+    }
 }

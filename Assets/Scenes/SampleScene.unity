@@ -305,7 +305,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -583,9 +583,6 @@ MonoBehaviour:
   dashSpeed: 30
   dashTime: 0.1
   resetSpeed: 5
-  facingRight: 0
-  facingLeft: 0
-  flipMode: 0
 --- !u!114 &977966322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,9 +637,8 @@ MonoBehaviour:
   WeaponToUses:
   - {fileID: 5668636162003206783, guid: 8188d1ff5c5a58a4ab8edda3682e0c6b, type: 3}
   - {fileID: 3191171746943457023, guid: 2dddd908b5d5c8649ad8425961a61e22, type: 3}
-  - {fileID: 5561288385449241524, guid: 667e1000236b8e54fb87a256b3040680, type: 3}
-  WeaponToUse: {fileID: 5668636162003206783, guid: 8188d1ff5c5a58a4ab8edda3682e0c6b, type: 3}
-  WeaponPos: {fileID: 2081000007}
+  - {fileID: 745723026052881054, guid: 667e1000236b8e54fb87a256b3040680, type: 3}
+  WeaponParent: {fileID: 2081000007}
 --- !u!1 &1321188540
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563513875}
-  - component: {fileID: 1563513874}
+  - component: {fileID: 1563513876}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -706,20 +702,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1563513874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563513873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397cc109129b1a846a4803ee92c5f61e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numOfEnemy: 3
-  enemyPrefab: {fileID: 8100563614835862892, guid: c7a5c6c81534b7e488bf3bc847185d52, type: 3}
 --- !u!4 &1563513875
 Transform:
   m_ObjectHideFlags: 0
@@ -735,6 +717,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1563513876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563513873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397cc109129b1a846a4803ee92c5f61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfEnemy: 3
+  enemyPrefab: {fileID: 7117675348847704582, guid: c7a5c6c81534b7e488bf3bc847185d52, type: 3}
 --- !u!1 &2054074171
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,8 +948,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2081000007}
+  - component: {fileID: 2081000008}
   m_Layer: 0
-  m_Name: WeaponPos
+  m_Name: WeaponParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -967,13 +964,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081000006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.593, y: -0.031, z: 0}
+  m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 977966318}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081000008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081000006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff40c6312515674c9d93113830b090f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 977966316}
 --- !u!1 &2111460644
 GameObject:
   m_ObjectHideFlags: 0
