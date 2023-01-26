@@ -22,7 +22,6 @@ public class CharaterMovement : CharacterComponant
     {
         base.HandleAbility();
         CharacterMove();
-        FlipCharacter();
     }
     protected override void HandleInput()
     {
@@ -59,10 +58,6 @@ public class CharaterMovement : CharacterComponant
         walkSpeed = dashSpeed;
         yield return new WaitForSeconds(dashTime);
         walkSpeed = resetSpeed;
-    }
-    void FlipCharacter()
-    {
-        
     }
        
 }

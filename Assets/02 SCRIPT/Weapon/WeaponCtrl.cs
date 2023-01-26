@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponCtrl : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] float timeBtwShoot = 0.5f;
     [SerializeField] float FireForce = 40f;
     [SerializeField] Transform firePos;
 

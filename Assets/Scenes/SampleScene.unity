@@ -695,6 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1563513875}
   - component: {fileID: 1563513876}
+  - component: {fileID: 1563513877}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -731,6 +732,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numOfEnemy: 3
   enemyPrefab: {fileID: 7117675348847704582, guid: c7a5c6c81534b7e488bf3bc847185d52, type: 3}
+--- !u!114 &1563513877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563513873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9a7c94aaf74c9429bb0da4bf1e9a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reticlePrefab: {fileID: 9156792486186714632, guid: d428a21c95cf9084791bab85e7d09ff4, type: 3}
 --- !u!1 &2054074171
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 977966316}
+  avt: {fileID: 2076466121}
 --- !u!1 &2111460644
 GameObject:
   m_ObjectHideFlags: 0

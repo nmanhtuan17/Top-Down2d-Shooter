@@ -5,6 +5,7 @@ using UnityEngine;
 public class RTweapon : MonoBehaviour
 {
     [SerializeField] GameObject Player;
+    [SerializeField] SpriteRenderer avt;
     private void Start()
     {
         
@@ -27,11 +28,17 @@ public class RTweapon : MonoBehaviour
             if (Player.transform.eulerAngles.y == 0)
             {
                 transform.localRotation = Quaternion.Euler(180, 0, -angle);
+                avt.flipX = true;
             }
             else if (Player.transform.eulerAngles.y == 180)
             {
                 transform.localRotation = Quaternion.Euler(180, 180, -angle);
             }
+            
+        }
+        else
+        {
+            avt.flipX = false;
         }
     }
 }
