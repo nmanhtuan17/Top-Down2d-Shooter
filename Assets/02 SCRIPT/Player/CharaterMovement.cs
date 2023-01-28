@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharaterMovement : CharacterComponant
 {
-
+    
     [SerializeField] float speed = 5f;
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float dashSpeed = 15f;

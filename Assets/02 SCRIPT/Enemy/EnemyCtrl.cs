@@ -10,6 +10,14 @@ public class EnemyCtrl : MonoBehaviour
 
     [SerializeField] GameObject Player;
     [SerializeField] public float speed = 2.5f;
+    float walkSpeed;
+    [SerializeField] float atackSpeed = 5f;
+    [SerializeField] float timeDelay = 3f;
+    [SerializeField] float range = 1.5f;
+    [SerializeField] Animator anim;
+
+    Vector3 curentPos;
+
 
     private void Awake()
     {
@@ -18,17 +26,26 @@ public class EnemyCtrl : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
+        walkSpeed = speed;
+
+        curentPos = transform.position;
     }
 
     void Update()
     {
-        followPlayer();
         EnemyDead();
+        followPlayer();
+
+        //attack();
     }
 
     void followPlayer()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, (Vector2)Player.transform.position,
+                                                walkSpeed * Time.deltaTime);
+        
+
     }
     public void EnemyDead()
     {
@@ -41,5 +58,30 @@ public class EnemyCtrl : MonoBehaviour
         {
             health--;
         }
+        if(otherCol.tag == "Player")
+        {
+            StartCoroutine(atackPlayer());
+        }
+    }
+    /*void attack()
+    {
+        
+        
+        if (Vector3.Distance(Player.transform.position, transform.position)  <= range)
+        {
+            
+            StartCoroutine(atackPlayer());
+
+        }
+        
+    }*/
+
+    IEnumerator atackPlayer()
+    {
+        walkSpeed = atackSpeed;
+        anim.SetBool("attack", true);
+        yield return new WaitForSeconds(timeDelay);
+        walkSpeed = speed;
+        anim.SetBool("attack", false);
     }
 }

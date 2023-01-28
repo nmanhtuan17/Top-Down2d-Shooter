@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class WeaponCtrl : MonoBehaviour
 {
+    
+
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float FireForce = 40f;
     [SerializeField] Transform firePos;
 
-    public float angle;
+    [SerializeField] float timeBTWFire = 0f;
     void Start()
     {
         
@@ -17,9 +19,11 @@ public class WeaponCtrl : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        timeBTWFire += Time.deltaTime;
+        if (Input.GetMouseButton(0) && timeBTWFire >= 0.1f)
         {
             Fire();
+            timeBTWFire = 0f;
         }
     }
      
@@ -28,6 +32,7 @@ public class WeaponCtrl : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FireForce * firePos.up, ForceMode2D.Impulse);
+        
         Destroy(bullet, 2f);
     }
 
