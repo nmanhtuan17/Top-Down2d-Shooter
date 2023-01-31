@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg
+    uniqueID: 1625308881
+    locked: 0
   - name: map
     uniqueID: 2171345435
     locked: 0

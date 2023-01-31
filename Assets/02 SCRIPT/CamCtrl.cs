@@ -11,6 +11,8 @@ public class CamCtrl : MonoBehaviour
     [SerializeField] float shakeRandomess = 0.1f;
     [SerializeField] float shakeTime = 0.01f;
 
+    [SerializeField] float x, y;
+    Vector2 border;
 
     void Start()
     {
@@ -20,7 +22,10 @@ public class CamCtrl : MonoBehaviour
     
     void Update()
     {
+        border = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+
         FollowPlayer();
+        limitCam();
         timeBTWFire += Time.deltaTime;
         if (Input.GetMouseButton(0) && timeBTWFire >= 0.1f)
         {
@@ -31,6 +36,26 @@ public class CamCtrl : MonoBehaviour
     void FollowPlayer()
     {
         transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
+       
+    }
+    void limitCam()
+    {
+        if (border.x > x)
+        {
+            border.x = x;
+        }
+        else if (-border.x < -x)
+        {
+            border.x = -x + border.x;
+        }
+        else if (border.y > y)
+        {
+            border.y = y;
+        }
+        else if (-border.y < -y)
+        {
+            border.y = -y + border.y;
+        }
     }
     public void Shake()
     {
