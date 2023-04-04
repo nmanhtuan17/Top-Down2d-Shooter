@@ -10,20 +10,22 @@ public class WeaponCtrl : MonoBehaviour
     [SerializeField] float FireForce = 40f;
     [SerializeField] Transform firePos;
 
-    [SerializeField] float timeBTWFire = 0f;
+    [SerializeField] float timeBTWFire;
+     float timeCount;
     void Start()
     {
-        
+        timeCount = timeBTWFire;
     }
 
     
     void Update()
     {
-        timeBTWFire += Time.deltaTime;
-        if (Input.GetMouseButton(0) && timeBTWFire >= 0.1f)
+        timeCount -= Time.deltaTime;
+        if (Input.GetMouseButton(0) && timeCount <= 0)
         {
             Fire();
-            timeBTWFire = 0f;
+            CamCtrl.instance.Shake();
+            timeCount = timeBTWFire;
         }
     }
      
@@ -33,7 +35,7 @@ public class WeaponCtrl : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FireForce * firePos.up, ForceMode2D.Impulse);
         
-        Destroy(bullet, 2f);
+        //Destroy(bullet, 2f);
     }
 
     

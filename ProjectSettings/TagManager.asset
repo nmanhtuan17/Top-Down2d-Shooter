@@ -49,8 +49,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: health
+  - name: Player
+    uniqueID: 4062941743
+    locked: 0
+  - name: Enemies
     uniqueID: 2814092211
+    locked: 0
+  - name: Weapon
+    uniqueID: 2364372813
     locked: 0
   - name: aim
     uniqueID: 6309015

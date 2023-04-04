@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5668636161627274701}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.241, y: 0.084, z: 0}
+  m_LocalPosition: {x: 0.51, y: -0.404, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5668636161905007707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.03, z: 0}
+  m_LocalPosition: {x: 0.495, y: 0.593, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -102,11 +102,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1930594483
+  m_SortingLayer: 3
   m_SortingOrder: 9
-  m_Sprite: {fileID: -2108937280, guid: 89b2cf729f5b3d74bb21c5893ac95b4e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 669995cae836d664886ca82edcdf3923, type: 3}
+  m_Color: {r: 0.33034885, g: 0.56337655, b: 0.6320754, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643a8ffdfe17ad74ca4dfc8e4a9c2a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 483795689998356665, guid: 9ab725b10c19a4a4daec0ca8033272bc, type: 3}
-  FireForce: 40
+  bulletPrefab: {fileID: 5550270636536716911, guid: deb7958e89db0fe48912b3d06c9cdb52, type: 3}
+  FireForce: 25
   firePos: {fileID: 5668636161627274700}
-  timeBTWFire: 0
+  timeBTWFire: 0.6

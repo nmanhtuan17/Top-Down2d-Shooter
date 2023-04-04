@@ -8,7 +8,7 @@ public class EnemyCtrl : MonoBehaviour
 
     public float health = 3;
 
-    [SerializeField] GameObject Player;
+    public GameObject Player;
     [SerializeField] public float speed = 2.5f;
     float walkSpeed;
     [SerializeField] float atackSpeed = 5f;
@@ -16,7 +16,14 @@ public class EnemyCtrl : MonoBehaviour
     [SerializeField] float range = 1.5f;
     [SerializeField] Animator anim;
 
+
     Vector3 curentPos;
+
+
+
+    public GameObject deathPref;
+
+
 
 
     private void Awake()
@@ -28,7 +35,6 @@ public class EnemyCtrl : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         walkSpeed = speed;
-
         curentPos = transform.position;
     }
 
@@ -49,8 +55,13 @@ public class EnemyCtrl : MonoBehaviour
     }
     public void EnemyDead()
     {
+
         if (health <= 0)
+        {
             Destroy(gameObject);
+            Instantiate(deathPref, transform.position, transform.rotation);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D otherCol)
     {

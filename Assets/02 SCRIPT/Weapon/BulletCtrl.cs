@@ -5,13 +5,15 @@ using UnityEngine;
 public class BulletCtrl : MonoBehaviour
 {
     Vector2 border;
+
+    public GameObject bulletEffect;
     
     void Start()
     {
         border = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -21,6 +23,7 @@ public class BulletCtrl : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
+            Instantiate(bulletEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthCtrl : MonoBehaviour
 {
@@ -9,9 +10,9 @@ public class HealthCtrl : MonoBehaviour
 
     
     public float curentHealth;
-    public float maxHealth = 10;
+    public float maxHealth;
 
-    
+    public GameObject GameOver;
     private void Awake()
     {
         instance = this;
@@ -24,9 +25,10 @@ public class HealthCtrl : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curentHealth -= damage;
-        if(curentHealth <= 0)
+        if(curentHealth < 0)
         {
             gameObject.SetActive(false);
+            GameOver.SetActive(true);
             Time.timeScale = 0;
         }
     }

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class WpManager : CharacterComponant
 {
-    [SerializeField] List<WeaponCtrl> WeaponToUses = new List<WeaponCtrl>();
+    [SerializeField] List<GameObject> WeaponToUses = new List<GameObject>();
     [SerializeField] Transform WeaponParent;
 
     protected override void Start()
     {
         base.Start();
-        EquipWeapon(WeaponToUses[Random.Range(0, 2)], WeaponParent);
+        EquipWeapon(WeaponToUses[Random.Range(0, 3)], WeaponParent);
     }
 
 
@@ -22,7 +22,7 @@ public class WpManager : CharacterComponant
     }
     
 
-    void EquipWeapon(WeaponCtrl weapon, Transform weaponPos)
+    void EquipWeapon(GameObject weapon, Transform weaponPos)
     {
         Instantiate(weapon, weaponPos).transform.parent = WeaponParent;
     }

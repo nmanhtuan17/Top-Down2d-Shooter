@@ -8,6 +8,12 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] Slider healthBar;
     [SerializeField] TextMeshProUGUI healthNum;
+    [SerializeField] Text timeText;
+    [SerializeField] float timeInLevel;
+
+
+
+    float minute, second;
     void Start()
     {
         
@@ -17,6 +23,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         UpdateHealth();
+        displayTime();
     }
     void UpdateHealth()
     {
@@ -28,6 +35,31 @@ public class UIManager : MonoBehaviour
             healthNum.text = HealthCtrl.instance.curentHealth.ToString() +
                         "/" + HealthCtrl.instance.maxHealth.ToString();
         }
+
+
         
+    }
+
+    
+    void displayTime()
+    {
+        if (timeInLevel <= 0)
+        {
+            Time.timeScale = 0;
+        }
+            
+        
+        timeInLevel -= Time.deltaTime;
+        minute = Mathf.Floor(timeInLevel / 60f);
+        second = timeInLevel % 60f;
+        if(minute > 0)
+        {
+            timeText.text = Mathf.RoundToInt(minute).ToString() + ":" + Mathf.RoundToInt(second).ToString();
+        }
+        else
+        {
+            timeText.text = Mathf.RoundToInt(second).ToString();
+        }
+
     }
 }
