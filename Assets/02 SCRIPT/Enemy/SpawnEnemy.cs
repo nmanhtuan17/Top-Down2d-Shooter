@@ -25,6 +25,7 @@ public class SpawnEnemy : MonoBehaviour
         if (timeCountDown <= 0)
         {
             Spawn();
+            timeCountDown = Random.Range(3f, 5f);
         }
         //Spawn Enemy end
         
@@ -36,8 +37,11 @@ public class SpawnEnemy : MonoBehaviour
         for(int i = 0; i < numOfEnemy; i++)
         {
             posSpawn = new Vector2(Random.Range(-mapX, mapX), Random.Range(-mapY, mapY));
-            Instantiate(enemyPrefab, posSpawn, Quaternion.identity);
+            GameObject enemy = EnemyPoolCtrl.instance.GetEnemy();
+            enemy.transform.position = posSpawn;
+            EnemyCtrl enemyCtrl = enemy.GetComponent<EnemyCtrl>();
+            enemyCtrl.health = Random.Range(2f, 4f);
         }
-        timeCountDown = Random.Range(3f, 5f);
+        
     }
 }

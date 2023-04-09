@@ -19,7 +19,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if(otherCol.tag == "Enemy")
         {
-            HealthCtrl.instance.TakeDamage(1);
+            HealthCtrl.instance.TakeDamage(EnemyCtrl.instance.damage);
         }
     }
 }

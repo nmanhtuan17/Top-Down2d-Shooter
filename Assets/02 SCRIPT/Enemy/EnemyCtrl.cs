@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnemyCtrl : MonoBehaviour
 {
+    
+
+
     public static EnemyCtrl instance;
 
-    public float health = 3;
-
+    public float health;
+    public float damage;
     public GameObject Player;
     [SerializeField] public float speed = 2.5f;
     float walkSpeed;
@@ -42,15 +45,13 @@ public class EnemyCtrl : MonoBehaviour
     {
         EnemyDead();
         followPlayer();
-
-        //attack();
     }
 
     void followPlayer()
     {
         transform.position = Vector2.MoveTowards(transform.position, (Vector2)Player.transform.position,
                                                 walkSpeed * Time.deltaTime);
-        
+
 
     }
     public void EnemyDead()
@@ -58,7 +59,7 @@ public class EnemyCtrl : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            EnemyPoolCtrl.instance.ReturnEnemy(gameObject);
             Instantiate(deathPref, transform.position, transform.rotation);
         }
 
@@ -68,24 +69,13 @@ public class EnemyCtrl : MonoBehaviour
         if (otherCol.tag == "Bullet")
         {
             health--;
+            BulletPoolCtrl.instance.ReturnBullet(otherCol.gameObject);
         }
-        if(otherCol.tag == "Player")
+        if (otherCol.tag == "Player")
         {
             StartCoroutine(atackPlayer());
         }
     }
-    /*void attack()
-    {
-        
-        
-        if (Vector3.Distance(Player.transform.position, transform.position)  <= range)
-        {
-            
-            StartCoroutine(atackPlayer());
-
-        }
-        
-    }*/
 
     IEnumerator atackPlayer()
     {

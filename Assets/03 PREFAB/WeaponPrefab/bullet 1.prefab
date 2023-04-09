@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5550270636536716896}
   - component: {fileID: 5550270636536716910}
   - component: {fileID: 5550270636536716897}
-  - component: {fileID: -5844949990365169789}
   m_Layer: 0
   m_Name: bullet 1
   m_TagString: Bullet
@@ -138,15 +137,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletEffect: {fileID: 5117420354683177073, guid: da7e8e68013de1a4282170e750c81592, type: 3}
---- !u!114 &-5844949990365169789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5550270636536716911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25ad424f42925d744aa3328e5476606b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

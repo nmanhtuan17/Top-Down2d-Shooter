@@ -37,8 +37,5 @@ public class ShootGun : MonoBehaviour
             rb.AddForce(FireForce * firePos.up, ForceMode2D.Impulse);
         }
         
-
-        //Destroy(bullet, 2f);
-        
     }
 }

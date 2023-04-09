@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponCtrl : MonoBehaviour
 {
     
-
+    
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float FireForce = 40f;
     [SerializeField] Transform firePos;
@@ -31,11 +31,11 @@ public class WeaponCtrl : MonoBehaviour
      
     void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        GameObject bullet = BulletPoolCtrl.instance.GetBullet();
+        bullet.transform.position = firePos.position;
+        bullet.transform.rotation = firePos.rotation;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FireForce * firePos.up, ForceMode2D.Impulse);
-        
-        //Destroy(bullet, 2f);
     }
 
     

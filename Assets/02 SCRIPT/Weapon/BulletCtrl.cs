@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class BulletCtrl : MonoBehaviour
 {
-    Vector2 border;
-
     public GameObject bulletEffect;
-    
+    float timeCount = 1.5f;
     void Start()
     {
-        border = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
+        
     }
 
     
     void Update()
     {
-        
+        OnBecameInvisible();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +22,17 @@ public class BulletCtrl : MonoBehaviour
         if(collision.tag == "Enemy")
         {
             Instantiate(bulletEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            
         }
+    }
+
+    void OnBecameInvisible()
+    {
+        timeCount -= Time.deltaTime;
+        if(timeCount <= 0){
+            BulletPoolCtrl.instance.ReturnBullet(gameObject);
+            timeCount = 1.5f;
+        }
+            
     }
 }

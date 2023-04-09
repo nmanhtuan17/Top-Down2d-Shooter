@@ -22,7 +22,7 @@ public class HealthCtrl : MonoBehaviour
     {
         
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         curentHealth -= damage;
         if(curentHealth < 0)
