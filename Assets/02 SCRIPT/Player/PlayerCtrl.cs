@@ -20,12 +20,14 @@ public class PlayerCtrl : MonoBehaviour
     void Update()
     {
         boundMove();
+    }
+    void FixedUpdate()
+    {
         Moving();
     }
-    
     public void Moving(){
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        _rb.velocity = movement * speed * Time.deltaTime;
+        _rb.MovePosition(_rb.position + movement * speed * Time.fixedDeltaTime);
     }
     
     void boundMove()

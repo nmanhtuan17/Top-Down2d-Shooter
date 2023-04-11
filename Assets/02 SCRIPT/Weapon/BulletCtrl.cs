@@ -21,8 +21,8 @@ public class BulletCtrl : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
-            Instantiate(bulletEffect, transform.position, Quaternion.identity);
-            
+            GameObject effect = BulletEffctPool.instance.GetBulletEffect();
+            effect.transform.position = transform.position;
         }
     }
 
@@ -35,4 +35,6 @@ public class BulletCtrl : MonoBehaviour
         }
             
     }
+
+    
 }

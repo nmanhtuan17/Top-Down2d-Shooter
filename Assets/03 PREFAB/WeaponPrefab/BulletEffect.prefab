@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5117420354683177078}
   - component: {fileID: 5117420354683177079}
   - component: {fileID: 5117420354683177072}
-  - component: {fileID: 6882802664037701262}
+  - component: {fileID: 8597093352946802555}
   m_Layer: 0
   m_Name: BulletEffect
   m_TagString: Untagged
@@ -4871,7 +4871,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &6882802664037701262
+--- !u!114 &8597093352946802555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4880,6 +4880,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5117420354683177073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25ad424f42925d744aa3328e5476606b, type: 3}
+  m_Script: {fileID: 11500000, guid: c452ce562953d1f4b92856209743f3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

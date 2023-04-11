@@ -48,7 +48,6 @@ public class BulletPoolCtrl : MonoBehaviour
     public void ReturnBullet(GameObject bullet)
     {
         bullet.SetActive(false);
-        bullet.transform.position = new Vector3(-1000f, -1000f, 0f);
         bulletPool.Add(bullet);
     }
 }
