@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+
+    public float speed;
+    public Vector2 movement;
     Rigidbody2D _rb;
-    public Vector2 currentMovement { get; set; }
 
 
     [SerializeField] float mapX, mapY;
@@ -18,20 +20,14 @@ public class PlayerCtrl : MonoBehaviour
     void Update()
     {
         boundMove();
+        Moving();
     }
-    private void FixedUpdate()
-    {
-        MOVING();
+    
+    public void Moving(){
+        movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        _rb.velocity = movement * speed * Time.deltaTime;
     }
-    public void MOVING()
-    {
-        Vector2 currentMovePosition = _rb.position + currentMovement * Time.fixedDeltaTime;
-        _rb.MovePosition(currentMovePosition);
-    }
-    public void setMovement(Vector2 newPosition)
-    {
-        currentMovement = newPosition;
-    }
+    
     void boundMove()
     {
         if(transform.position.x > mapX )

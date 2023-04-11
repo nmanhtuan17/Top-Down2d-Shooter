@@ -20,27 +20,24 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
         border = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        //Spawn Enemies
+        
         timeCountDown -= Time.deltaTime;
         if (timeCountDown <= 0)
         {
             Spawn();
             timeCountDown = Random.Range(3f, 5f);
         }
-        //Spawn Enemy end
         
     }
 
     void Spawn()
     {
-        numOfEnemy = Mathf.Floor(Random.Range(3f, 5f));
+        //numOfEnemy = Mathf.Floor(Random.Range(3f, 5f));
         for(int i = 0; i < numOfEnemy; i++)
         {
             posSpawn = new Vector2(Random.Range(-mapX, mapX), Random.Range(-mapY, mapY));
             GameObject enemy = EnemyPoolCtrl.instance.GetEnemy();
             enemy.transform.position = posSpawn;
-            EnemyCtrl enemyCtrl = enemy.GetComponent<EnemyCtrl>();
-            enemyCtrl.health = Random.Range(2f, 4f);
         }
         
     }

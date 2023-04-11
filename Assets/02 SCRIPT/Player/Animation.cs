@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation : CharacterComponant
+public class Animation : MonoBehaviour
 {
     public Animator anim;
-    protected override void HandleAbility()
-    {
-        base.HandleAbility();
+    public PlayerCtrl playerCtrl;
+    private void Start() {
+        
+        playerCtrl = GetComponent<PlayerCtrl>();
+    }
+    private void Update() {
         UpdateAnimation();
     }
     private void UpdateAnimation()
     {
-        if (inputMovement == Vector2.zero)
+        if (playerCtrl.movement == Vector2.zero)
             anim.SetBool("IsRun", false);
         else
             anim.SetBool("IsRun", true);

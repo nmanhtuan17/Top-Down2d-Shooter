@@ -760,6 +760,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8444203418667875899, guid: c741eed90a274924bad0e2dd97c4595d, type: 3}
   m_PrefabInstance: {fileID: 8444203418831874773}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &977966326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977966316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca677e87187dae42b08de80e9f81efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockForce: 3
+  knockTime: 0.3
 --- !u!1 &1221689287
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,8 +803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7a396bb54730e418b5f8e5dc8e101c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7600450460670293200, guid: 75433554313639845880ecdd0398e73e, type: 3}
+  enemyPrefab: {fileID: 8486092700393361504, guid: 75433554313639845880ecdd0398e73e, type: 3}
   enemyPoolSize: 10
+  enemyPool: []
 --- !u!4 &1221689289
 Transform:
   m_ObjectHideFlags: 0
@@ -16966,7 +16981,7 @@ MonoBehaviour:
   mapX: 18.5
   mapY: 12.5
   numOfEnemy: 1
-  enemyPrefab: {fileID: 7600450460670293200, guid: 75433554313639845880ecdd0398e73e, type: 3}
+  enemyPrefab: {fileID: 8486092700393361504, guid: 75433554313639845880ecdd0398e73e, type: 3}
 --- !u!114 &1563513877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17879,6 +17894,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8444203418667875896, guid: c741eed90a274924bad0e2dd97c4595d, type: 3}
+      propertyPath: speed
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8444203418667875897, guid: c741eed90a274924bad0e2dd97c4595d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -17927,5 +17946,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8444203418667875876, guid: c741eed90a274924bad0e2dd97c4595d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c741eed90a274924bad0e2dd97c4595d, type: 3}
