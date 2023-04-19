@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5550270636536716911, guid: deb7958e89db0fe48912b3d06c9cdb52, type: 3}
-  FireForce: 20
+  FireForce: 30
   firePos: {fileID: 5574661304597519640}
-  timeBTWFire: 0.2
+  timeBTWFire: 0.15
 --- !u!1 &7162591242534083399
 GameObject:
   m_ObjectHideFlags: 0

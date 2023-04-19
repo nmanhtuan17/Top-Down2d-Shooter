@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletCtrl : MonoBehaviour
 {
-    public GameObject bulletEffect;
     float timeCount = 1.5f;
     void Start()
     {
@@ -16,7 +15,7 @@ public class BulletCtrl : MonoBehaviour
     {
         OnBecameInvisible();
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")
@@ -25,7 +24,7 @@ public class BulletCtrl : MonoBehaviour
             effect.transform.position = transform.position;
         }
     }
-
+    
     void OnBecameInvisible()
     {
         timeCount -= Time.deltaTime;

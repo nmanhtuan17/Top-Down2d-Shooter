@@ -69,9 +69,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01840061, y: 0.044552237}
+  m_Offset: {x: 0.030840874, y: 0.080095835}
   serializedVersion: 2
-  m_Radius: 0.21157733
+  m_Radius: 0.2879961
 --- !u!50 &7975428146138837112
 Rigidbody2D:
   serializedVersion: 4
@@ -107,13 +107,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   damage: 1
-  Player: {fileID: 8444203418667875897, guid: c741eed90a274924bad0e2dd97c4595d, type: 3}
+  Player: {fileID: 0}
   deathPref: {fileID: 8790268148658489315, guid: 3823b6e1febd7bf4d9119db09c821441, type: 3}
   canMove: 1
   speed: 3.5
   atackSpeed: 3
   attackDelay: 3
   anim: {fileID: 0}
+  circleCollider2D: {fileID: 0}
 --- !u!1 &8486092700610725179
 GameObject:
   m_ObjectHideFlags: 0

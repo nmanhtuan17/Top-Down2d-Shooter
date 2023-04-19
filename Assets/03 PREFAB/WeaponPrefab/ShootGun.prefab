@@ -168,8 +168,8 @@ MonoBehaviour:
   - {fileID: 1308628948987900954}
   - {fileID: 3775608606103667456}
   bulletPrefab: {fileID: 5550270636536716911, guid: deb7958e89db0fe48912b3d06c9cdb52, type: 3}
-  FireForce: 15
-  timeBTWFire: 1
+  FireForce: 25
+  timeBTWFire: 0.7
 --- !u!1 &6287580508671606466
 GameObject:
   m_ObjectHideFlags: 0
