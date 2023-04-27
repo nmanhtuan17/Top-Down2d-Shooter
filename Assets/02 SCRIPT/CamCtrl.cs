@@ -21,24 +21,15 @@ public class CamCtrl : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
-    
+
     void Update()
     {
-        
-
-        //FollowPlayer();
         limitCam();
-        //timeBTWFire += Time.deltaTime;
-        /*if (Input.GetMouseButton(0) && timeBTWFire >= 0.1f)
-        {
-            Shake();
-            timeBTWFire = 0f;
-        }*/
     }
-    
+
     void limitCam()
     {
         float xPos = Mathf.Clamp(target.position.x, minPos.x, maxPos.x);
@@ -53,11 +44,31 @@ public class CamCtrl : MonoBehaviour
     public IEnumerator IEShake()
     {
         Vector3 currentPos = transform.position;
-        for(int i = 0; i < shakeVibrato; i++)
+        for (int i = 0; i < shakeVibrato; i++)
         {
             Vector3 shakePos = currentPos + Random.onUnitSphere * shakeRandomess;
             yield return new WaitForSeconds(shakeTime);
             transform.position = shakePos;
         }
     }
+    public IEnumerator ShakeCamera(float duration, float magnitude)
+    {
+        Vector3 originalPosition = transform.localPosition;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(originalPosition.x + x, originalPosition.y + y, originalPosition.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+
+        transform.localPosition = originalPosition;
+    }
+
 }
