@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5550270636536716898}
   - component: {fileID: 5550270636536716899}
-  - component: {fileID: 5550270636536716896}
   - component: {fileID: 5550270636536716910}
   - component: {fileID: 5550270636536716897}
+  - component: {fileID: 5175555551052498703}
   m_Layer: 0
   m_Name: bullet 1
   m_TagString: Bullet
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -1930594483
   m_SortingLayer: 3
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: b104ec51ec1749446a0e99de855d198e, type: 3}
+  m_Sprite: {fileID: 2111583515, guid: 90b03849f49a9bf459ce1da776f8515d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5550270636536716896
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5550270636536716911}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0044493675, y: -0.000000059604645}
-  serializedVersion: 2
-  m_Radius: 0.21832848
 --- !u!50 &5550270636536716910
 Rigidbody2D:
   serializedVersion: 4
@@ -136,4 +120,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f441dd13490bbce4a98b216081afab8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletEffect: {fileID: 5117420354683177073, guid: da7e8e68013de1a4282170e750c81592, type: 3}
+--- !u!70 &5175555551052498703
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550270636536716911}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.00067043304, y: 0.0019563735}
+  m_Size: {x: 0.2893238, y: 0.78562325}
+  m_Direction: 0

@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5668636162003206783}
   m_Layer: 0
   m_Name: Pistol
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 643a8ffdfe17ad74ca4dfc8e4a9c2a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5550270636536716911, guid: deb7958e89db0fe48912b3d06c9cdb52, type: 3}
+  weaponData: {fileID: 11400000, guid: bce997b2293c02845b7ba9d606977225, type: 2}
   FireForce: 30
-  firePos: {fileID: 5668636161627274700}
+  listFirePos:
+  - {fileID: 5668636161627274700}
   timeBTWFire: 0.4

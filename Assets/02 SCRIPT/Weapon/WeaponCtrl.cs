@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class WeaponCtrl : MonoBehaviour
 {
-    
-    
-    [SerializeField] GameObject bulletPrefab;
-    [SerializeField] float FireForce = 40f;
-    [SerializeField] Transform firePos;
-
-    [SerializeField] float timeBTWFire;
-     float timeCount;
+    public static WeaponCtrl instance;
+    [SerializeField] WeaponDataSO weaponData;
+    [SerializeField] List<Transform> listFirePos = new List<Transform>();
+    float timeCount;
+    private void Awake() {
+        instance = this;
+    }
     void Start()
     {
-        timeCount = timeBTWFire;
+        timeCount = weaponData.timeBTWFire;
     }
 
-    
+
     void Update()
     {
         timeCount -= Time.deltaTime;
@@ -25,18 +24,24 @@ public class WeaponCtrl : MonoBehaviour
         {
             Fire();
             CamCtrl.instance.Shake();
-            timeCount = timeBTWFire;
+            timeCount = weaponData.timeBTWFire;
         }
     }
-     
+    public int GetDamage(){
+        return weaponData.damage;
+    }
     void Fire()
     {
-        GameObject bullet = BulletPoolCtrl.instance.GetBullet();
-        bullet.transform.position = firePos.position;
-        bullet.transform.rotation = firePos.rotation;
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(FireForce * firePos.up, ForceMode2D.Impulse);
+        
+        
+        foreach (Transform firePos in listFirePos)
+        {
+            AudioManager.instance.PlaySFX(0);
+            GameObject bullet = BulletPoolCtrl.instance.GetBullet();
+            bullet.transform.position = firePos.position;
+            bullet.transform.rotation = firePos.rotation;
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(weaponData.fireForce * firePos.up, ForceMode2D.Impulse);
+        }
     }
-
-    
 }

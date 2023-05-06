@@ -64,7 +64,7 @@ public class EnemyCtrl : MonoBehaviour
     {
         if (otherCol.tag == "Bullet")
         {
-            health--;
+            health -= WeaponCtrl.instance.GetDamage();
             BulletPoolCtrl.instance.ReturnBullet(otherCol.gameObject);
         }
         if (otherCol.tag == "Player")

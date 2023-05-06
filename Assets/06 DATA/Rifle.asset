@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486d8a3fc6b50494e990867fc7fc8eed, type: 3}
+  m_Name: Rifle
+  m_EditorClassIdentifier: 
+  damage: 1
+  weaponName: Rifle
+  fireForce: 35
+  timeBTWFire: 0.15
+  weaponPrefab: {fileID: 3157798422568426598, guid: 2dddd908b5d5c8649ad8425961a61e22, type: 3}
+  bulletPrefab: {fileID: 5550270636536716911, guid: deb7958e89db0fe48912b3d06c9cdb52, type: 3}

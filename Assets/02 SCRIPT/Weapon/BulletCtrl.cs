@@ -16,14 +16,14 @@ public class BulletCtrl : MonoBehaviour
         OnBecameInvisible();
     }
     
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Enemy")
-        {
-            GameObject effect = BulletEffctPool.instance.GetBulletEffect();
-            effect.transform.position = transform.position;
-        }
-    }
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+    //     if(collision.tag == "Enemy")
+    //     {
+    //         GameObject effect = BulletEffctPool.instance.GetBulletEffect();
+    //         effect.transform.position = transform.position;
+    //     }
+    // }
     
     void OnBecameInvisible()
     {

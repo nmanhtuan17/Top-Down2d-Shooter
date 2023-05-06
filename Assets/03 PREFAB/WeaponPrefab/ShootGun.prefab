@@ -127,10 +127,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7573667291893526275}
-  - component: {fileID: 7456840955728716736}
+  - component: {fileID: 7798687143725466928}
   m_Layer: 0
   m_Name: ShootGun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7456840955728716736
+--- !u!114 &7798687143725466928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,15 +160,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3157798422568426598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6899cefef6ac4542986b2b880028fb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 643a8ffdfe17ad74ca4dfc8e4a9c2a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: b459a5ff5ee22394aafed74b68453a1c, type: 2}
+  FireForce: 25
   listFirePos:
   - {fileID: 5574661304597519640}
   - {fileID: 1308628948987900954}
   - {fileID: 3775608606103667456}
-  bulletPrefab: {fileID: 5550270636536716911, guid: deb7958e89db0fe48912b3d06c9cdb52, type: 3}
-  FireForce: 25
   timeBTWFire: 0.7
 --- !u!1 &6287580508671606466
 GameObject:

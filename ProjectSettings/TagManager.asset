@@ -6,14 +6,16 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Tilemap
+  - Weapon
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
